@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms with css</title>
+    <style>
+/* before */
+/* .imp-label::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 16px;
+    border-radius: 10px;
+    background-color: orange; */
+/* } */
+.imp-label::after{
+    /*  */
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: orange;
+}
+.email:hover{
+    background-color: green;
+    padding: 5px;
+}
+.btn-primary{
+    background-color: blue;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border: 1px white solid;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.btn-primary:hover{
+    background-color: white;
+    color: blue;
+    border:blue ;
+}
+/* after::part of the labbel */
+/* .imp-label:hover::after */
+    </style>
+</head>
+<body>
+    <div>
+        <h5>The real form</h5>
+        <form action=""></form>
+        <label class="imp-label" for="name">name</label>
+        <input type="text" name="name">
+
+        <label class="email" for="email">email</label>
+        <input type="text" name="email">
+
+        <button class="btn-primary" data-tooltip="Tooltip" type="button">Submit</button>
+    </div>
+</body>
+</html>
